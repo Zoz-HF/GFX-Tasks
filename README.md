@@ -20,4 +20,6 @@ This repository contains two separate OpenGL tasks, providing hands-on experienc
   <img src="https://github.com/Zoz-HF/GFX-Tasks/blob/main/task-2/img/Screenshot%202023-11-02%20190151.png?raw=true" alt="System and biomedical engineering" width="200">
 </div>
 
-You can follow the links above to get detailed information for each task. 😊
+---
+
+**You can follow the links above to get detailed information for each task. 😊**

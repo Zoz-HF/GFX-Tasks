@@ -176,7 +176,7 @@ int main(int argc, char** argv)
     // with the switch set so that extensions implemented even in pre-release drivers are exposed.
     glewExperimental = GL_TRUE;
     glewInit();
-
+    // performing the setup
     setup();
 
     // begins the event-processing loop, calling registered callback routines as needed

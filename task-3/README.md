@@ -3,11 +3,7 @@
 In Task 3, we further develop the skills acquired in Tasks 1 and 2 by incorporating additional techniques such as animation, projection, and bouncing into our arsenal.
 
 ## 1. Composing the scene
-<div align="center">
-  <div style="margin: 10px;">
-    <img src="img/animation.png"alt="Animation"width="400">
-  </div>
-</div>
+![GIF Demo](img/scene.gif)
 
 Here we can see the man and the wall that the ball will hit and the floor.
 

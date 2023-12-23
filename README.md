@@ -14,10 +14,10 @@ This repository contains two separate OpenGL tasks, providing hands-on experienc
 
 <div align="center">
   <div style="display: inline-block; margin-right: 20px;">
-    <img src="https://github.com/Zoz-HF/GFX-Tasks/blob/main/task-2/img/Home_Scene.png?raw=true" alt="System and biomedical engineering" width="400">
+    <img src="https://github.com/Zoz-HF/GFX-Tasks/blob/main/task02/img/Home_Scene.png" alt="System and biomedical engineering" width="400">
   </div>
   <div style="display: inline-block; height: 250px; margin: 40px;">
-    <img src="https://github.com/Zoz-HF/GFX-Tasks/blob/main/task-2/img/Screenshot%202023-11-02%20190151.png?raw=true" alt="System and biomedical engineering" width="200";style="height: 200px; margin: 40px;">
+    <img src="https://github.com/Zoz-HF/GFX-Tasks/blob/main/task02/img/Screenshot%202023-11-02%20190151.png" alt="System and biomedical engineering" width="200";style="height: 200px; margin: 40px;">
   </div>
 </div>
 

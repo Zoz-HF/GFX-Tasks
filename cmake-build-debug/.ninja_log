@@ -1,0 +1,5 @@
+# ninja log v5
+2	738	7250542869217048	CMakeFiles/task.dir/task.cpp.obj	3c828c6554029ca3
+738	899	7250542870798685	task.exe	9cea3e5e93239205
+8	930	7250593044317416	build.ninja	562abd29eb0dca41
+5	636	7250400654758742	CMakeFiles/task.dir/getBMP.cpp.obj	83055ca0557f64db

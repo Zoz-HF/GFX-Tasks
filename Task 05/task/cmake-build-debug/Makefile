@@ -56,10 +56,10 @@ RM = "C:\Program Files\JetBrains\CLion 2023.2.2\bin\cmake\win\x64\bin\cmake.exe"
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\Kareem\Desktop\Ziyad\task
+CMAKE_SOURCE_DIR = "E:\SBE\SBE 3rd Year\Courses\Computer Graphics\Tasks\github\GFX-Tasks\Task 05\task"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\Kareem\Desktop\Ziyad\task\cmake-build-debug
+CMAKE_BINARY_DIR = "E:\SBE\SBE 3rd Year\Courses\Computer Graphics\Tasks\github\GFX-Tasks\Task 05\task\cmake-build-debug"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -86,9 +86,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Kareem\Desktop\Ziyad\task\cmake-build-debug\CMakeFiles C:\Users\Kareem\Desktop\Ziyad\task\cmake-build-debug\\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start "E:\SBE\SBE 3rd Year\Courses\Computer Graphics\Tasks\github\GFX-Tasks\Task 05\task\cmake-build-debug\CMakeFiles" "E:\SBE\SBE 3rd Year\Courses\Computer Graphics\Tasks\github\GFX-Tasks\Task 05\task\cmake-build-debug\\CMakeFiles\progress.marks"
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\Kareem\Desktop\Ziyad\task\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "E:\SBE\SBE 3rd Year\Courses\Computer Graphics\Tasks\github\GFX-Tasks\Task 05\task\cmake-build-debug\CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -116,41 +116,41 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named task
+# Target rules for targets named task05
 
 # Build rule for target.
-task: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 task
-.PHONY : task
+task05: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 task05
+.PHONY : task05
 
 # fast build rule for target.
-task/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\task.dir\build.make CMakeFiles/task.dir/build
-.PHONY : task/fast
+task05/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\task05.dir\build.make CMakeFiles/task05.dir/build
+.PHONY : task05/fast
 
-task.obj: task.cpp.obj
-.PHONY : task.obj
+task05.obj: task05.cpp.obj
+.PHONY : task05.obj
 
 # target to build an object file
-task.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\task.dir\build.make CMakeFiles/task.dir/task.cpp.obj
-.PHONY : task.cpp.obj
+task05.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\task05.dir\build.make CMakeFiles/task05.dir/task05.cpp.obj
+.PHONY : task05.cpp.obj
 
-task.i: task.cpp.i
-.PHONY : task.i
+task05.i: task05.cpp.i
+.PHONY : task05.i
 
 # target to preprocess a source file
-task.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\task.dir\build.make CMakeFiles/task.dir/task.cpp.i
-.PHONY : task.cpp.i
+task05.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\task05.dir\build.make CMakeFiles/task05.dir/task05.cpp.i
+.PHONY : task05.cpp.i
 
-task.s: task.cpp.s
-.PHONY : task.s
+task05.s: task05.cpp.s
+.PHONY : task05.s
 
 # target to generate assembly for a file
-task.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\task.dir\build.make CMakeFiles/task.dir/task.cpp.s
-.PHONY : task.cpp.s
+task05.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\task05.dir\build.make CMakeFiles/task05.dir/task05.cpp.s
+.PHONY : task05.cpp.s
 
 # Help Target
 help:
@@ -160,10 +160,10 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... task
-	@echo ... task.obj
-	@echo ... task.i
-	@echo ... task.s
+	@echo ... task05
+	@echo ... task05.obj
+	@echo ... task05.i
+	@echo ... task05.s
 .PHONY : help
 
 

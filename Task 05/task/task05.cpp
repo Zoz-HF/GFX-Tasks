@@ -58,7 +58,7 @@ bool isWaiting = 0;
 // Directional light from the top-left-front
 GLfloat lightDirection[] = { 1, -1, 10, 0.0 };
 // Warm orange color for sunset, will work as the diffusion and the specular property
-GLfloat sunsetColor[] = { 1.0, 0.6, 0.2, 1.0 };
+GLfloat sunsetColor[] = { 1.0, 0.6, 0.2, 1.0 }; //= {0.0,0.0,0.0,1.0};// = { 1.0, 0.6, 0.2, 1.0 };
 
 // Material Property Vectors || Globals
 // Material properties for the car body.
@@ -94,12 +94,23 @@ float wheelsMatAmb[] = { 1.0, 0.5, 1.0, 1.0 };
 float wheelsMatDif[] = { 1.0, 0.5, 1.0, 1.0 };
 float wheelsMatSpec[] = { 0.20, 0.20, 0.20, 1.0 };
 
+// Spotlight globals
+static float spotAngle = 50.0; // Spotlight cone half-angle.
+float spotDirection[] = { 0.0, 0.0, -1.0 }; // Spotlight direction.
+static float spotExponent = 1.0; // Spotlight attenuation exponent.
+float spotLightDifAndSpec[] = { 1.0, 1.0, 1.0, 1.0 };
+float light1Pos[]={0.0, 0.0, 0.0,1.0};
+float light2Pos[]={0.0, 0.0, 0.0};
+bool showHideCone = 0.0;
+float lengthOfCone = 40;
+bool light1On = 1;
+bool light2On = 1;
+float L1 (0.0), L2(0.0), L3(0.0);
+
 bool checkCollisionTarget() {
     // 18 and 18.5 was manually calculated based on the half of the Z length of the car and the target after all transformations applied
     bool collisionX = (fabs(CX - targetX) <= 18);
     bool collisionZ = (fabs(CZ - targetZ) <= 18.5);
-
-    cout << "\nCX: " << CX << ", CZ: " << CZ << ", TargetX: " << targetX << ", TargetZ: " << targetZ << endl;
 
     return collisionX && collisionZ;
 }
@@ -112,13 +123,12 @@ bool checkCollisionWithBlock(float blockX, float blockZ) {
     bool collisionZ = (fabs(CZ - blockZ) <= 20.5);
 
     collisionBlocks = collisionX && collisionZ;
-    std::cout << collisionBlocks << ' ' << std::endl;
     return collisionBlocks;
 }
 
 // Initialization routine.
 void setup(void) {
-    glClearColor(1.0, 1.0, 1.0, 0.0);
+    glClearColor(0.0, 0.0, 0.0, 0.0);
 
     // Enable depth testing.
     glEnable(GL_DEPTH_TEST);
@@ -127,12 +137,33 @@ void setup(void) {
 
     glDisable(GL_LIGHTING);
     glDisable(GL_LIGHT0);
+    glDisable(GL_LIGHT1);
+    glDisable(GL_LIGHT2);
+
 
     glLightfv(GL_LIGHT0, GL_POSITION, lightDirection);
     glLightfv(GL_LIGHT0, GL_DIFFUSE, sunsetColor);
     glLightfv(GL_LIGHT0, GL_SPECULAR, sunsetColor);
 
+    glLightfv(GL_LIGHT1, GL_DIFFUSE, spotLightDifAndSpec);
+    glLightfv(GL_LIGHT1, GL_SPECULAR, spotLightDifAndSpec);
+    glLightfv(GL_LIGHT1, GL_SPOT_DIRECTION, spotDirection);
+
+
+
+    glLightfv(GL_LIGHT2, GL_DIFFUSE, spotLightDifAndSpec);
+    glLightfv(GL_LIGHT2, GL_SPECULAR, spotLightDifAndSpec);
+    glLightfv(GL_LIGHT2, GL_SPOT_DIRECTION, spotDirection);
+
+
+    float globAmb[] = { 0.1, 0.1, 0.1, 1.0 };
+    glLightModelfv(GL_LIGHT_MODEL_AMBIENT, globAmb); // Global ambient light.
     glLightModeli(GL_LIGHT_MODEL_LOCAL_VIEWER, GL_TRUE);
+
+    // Enable color material mode:
+    // The ambient and diffuse color of the front faces will track the color set by glColor().
+    glEnable(GL_COLOR_MATERIAL);
+    glColorMaterial(GL_FRONT, GL_AMBIENT_AND_DIFFUSE);
 }
 
 void create_block(float x, float y, float z) {
@@ -162,6 +193,8 @@ void change_block_noise() {
 
 // Drawing routine.
 void drawScene(void) {
+
+
     if (isBegin){
         change_block_noise();
         isBegin = false;
@@ -171,21 +204,37 @@ void drawScene(void) {
 
     glLoadIdentity();
 
+    // Spotlight properties.
+    glLightf(GL_LIGHT1, GL_SPOT_CUTOFF, spotAngle);
+    glLightf(GL_LIGHT1, GL_SPOT_EXPONENT, spotExponent);
+
+
     // Update the camera position to follow the car.
     if (spaceBarCounter==2){
         glEnable(GL_LIGHTING);
         glEnable(GL_LIGHT0);
+        glEnable(GL_LIGHT1);
+        glEnable(GL_LIGHT2);
         gluLookAt(
-                CX, CY + 10.0, CZ + 20.0 * zoom,  // eye position
-                CX, CY, CZ,                 // center position (look at the car)
+                CX+zoom, CY + 10.0+zoom, CZ + 15.0 + zoom,  // eye position
+                CX+zoom, CY+5+zoom, CZ+zoom,                 // center position (look at the car)
                 0.0, 1.0, 0.0                       // up vector
         );
-        glRotatef(angleX, 1.0, 0.0, 0.0);
-        glRotatef(angleY, 0.0, 1.0, 0.0);
+    // for animation
+     glTranslatef(CX+5, CY+8, CZ-60); // center position (look at the car)
+    glRotatef(angleX, 1.0, 0.0, 0.0);  // Rotate around the x_block-axis.
+    glRotatef(angleY, 0.0, 1.0, 0.0);  // Rotate around the y_block-axis.
+    glTranslatef(-CX-5,-CY-8,-CZ+60);
+
+
+
     }
     else {
         glDisable(GL_LIGHTING);
         glDisable(GL_LIGHT0);
+        glDisable(GL_LIGHT1);
+        glDisable(GL_LIGHT2);
+
         gluLookAt(0.0,0.0,50.0,   0.0,0.0,55.0,  0.0,1.0,0.0 );
         float x =20.0; float y=10.0; float z=70.0;
 
@@ -235,9 +284,8 @@ void drawScene(void) {
         }
     }
 
-    glTranslatef(0.0, 0.0, -20.0 * zoom);  // Move the entire car back along the z_block-axis with zoom factor.
-    glRotatef(angleX, 1.0, 0.0, 0.0);  // Rotate around the x_block-axis.
-    glRotatef(angleY, 0.0, 1.0, 0.0);  // Rotate around the y_block-axis.
+    glTranslatef(0.0, 0.0, -20.0 );  // Move the entire car back along the z_block-axis with zoom factor.
+
 
     glPushMatrix();
     glTranslatef(CX, CY, CZ);
@@ -319,7 +367,41 @@ void drawScene(void) {
     glScalef(1.5, 0.6, 0.8);
     glutSolidCube(carWidth);
     glPopMatrix();
-    glPopMatrix();
+
+    // Draw the Spotlight balls
+    // =====================
+    glPushMatrix();//////////////////////////////////////////////////////////push1
+    glRotatef(-90, 0.0, -1.0, 0.0);
+    if (light1On) glEnable(GL_LIGHT1); else glDisable(GL_LIGHT1);
+    if (light2On) glEnable(GL_LIGHT2); else glDisable(GL_LIGHT2);
+
+    glPushMatrix();//////////////////////////////////////////////////////////push2
+    glTranslatef(-2.6+L1, 4.2+L2 , -15.2+L3); //cone (yes), ball (yes) and spot pos
+    std::cout<<"L1 L2 L3 are "<<L1<<" "<<L2<<" "<<L3<<endl;
+
+    glDisable(GL_LIGHTING);
+    glutWireSphere(1,10,10); //ball (right) not affected by light
+    glEnable(GL_LIGHTING); ///enabling done
+
+    glLightfv(GL_LIGHT1, GL_POSITION,light1Pos );
+
+    glPopMatrix();//////////////////////////////////////////////////////////pop2
+
+    glPushMatrix(); //////////////////////////////////////////////////////////push4
+
+    glTranslatef(2.4+L1, 4.2+L2 , -15.2+L3); //cone, ball and spot pos
+
+    glDisable(GL_LIGHTING);
+    glutWireSphere(1,10,10); //ball (left) not affected by light
+    glEnable(GL_LIGHTING); ///enabling don
+
+    glLightfv(GL_LIGHT2, GL_POSITION,light2Pos );
+
+    glPopMatrix();//////////////////////////////////////////////////////////pop4
+
+    glPopMatrix();//////////////////////////////////////////////////////////pop1
+
+    glPopMatrix();/////////////////////final pop all the above is under (glTranslatef(CX, CY, CZ); glRotatef(-90, 0.0, 1.0, 0.0);)
 
     // Draw the ground
     // ===============
@@ -334,6 +416,8 @@ void drawScene(void) {
     glScalef(25.0, 1, 40.0);
     glutSolidCube(5.0);
     glPopMatrix();
+
+
 
     // Draw the Blocks
     // ===============
@@ -373,7 +457,6 @@ void drawScene(void) {
     glPopMatrix();
 
     if (checkCollisionTarget()) {
-        std::cout << "checkCollisionTarget            ";
         glColor3f(0.0, 0.0, 0.0); // Set color to red for collision messages.
         // Display messages.
         glRasterPos3f(8.0, 5.0, -180.0); // Adjust position for message display.
@@ -460,7 +543,7 @@ void displayRemainingTime(int value) {
 void resize(int w, int h) {
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
-    gluPerspective(60.0, (double) w / (double) h, 1.0, 100.0);
+    gluPerspective(65.0, (double) w / (double) h, 1.0, 120.0);
     glMatrixMode(GL_MODELVIEW);
     glViewport(0, 0, w, h);
 }
@@ -468,7 +551,6 @@ void resize(int w, int h) {
 // Keyboard input processing routine.
 void specialkey(int key, int x, int y){
     if(spaceBarCounter == 2 && (!(checkCollisionTarget() || collisionBlocks))){
-        std::cout<<collisionBlocks <<" " << std::endl;
      switch(key){
         case GLUT_KEY_UP:       //when the up key is pressed CZ++;
             if(CZ!=-173)
@@ -486,12 +568,25 @@ void specialkey(int key, int x, int y){
             if(CX!=55)
                 CX++;
             break;
+        case GLUT_KEY_PAGE_DOWN:
+            {
+        std::cout<<"key page down, the spot angle is "<<spotAngle<< endl;
+        if (spotAngle > 0.0) spotAngle -= 1.0;
+    }
+            break;
+        case GLUT_KEY_PAGE_UP:
+    {
+        std::cout<<"key page up, the spot angle is "<<spotAngle<< endl;
+        if (spotAngle < 90.0) spotAngle += 1.0;
+    }
+            break;
         }
     }
     glutPostRedisplay();
 }
 
 void keyInput(unsigned char key, int x, int y) {
+
     switch (key) {
         case 'r':  // Rotate right around y-axis.
             angleY += 5.0;
@@ -551,6 +646,49 @@ void keyInput(unsigned char key, int x, int y) {
             break;
         case ' ':
             if (spaceBarCounter<=1)spaceBarCounter +=1;
+            break;
+        case 't':
+            {
+            std::cout<<"key t, the spot exponent is "<<spotExponent<< endl;
+            if (spotExponent > 0.0) spotExponent -= 0.1;
+
+            }
+            break;
+        case 'T':
+            {
+        std::cout<<"key T, the spot exponent is "<<spotExponent<< endl;
+        spotExponent += 0.1;}
+            break;
+        case 's':
+            showHideCone = !showHideCone;
+            std::cout<<"show hide cone "<<showHideCone<<endl;
+            break;
+        case 'p':
+            light1On = !light1On;
+            std::cout<<" light 1 is "<<light1On<<endl;
+            break;
+        case 'a':
+            light2On = !light2On;
+            std::cout<<" light 2 is "<<light1On<<endl;
+            break;
+
+        case '7':
+            L1-=0.2;
+            break;
+        case'8':
+            L1+=0.2;
+            break;
+        case '4':
+            L2-=0.2;
+            break;
+        case '5':
+            L2+=0.2;
+            break;
+        case '1':
+            L3-=0.2;
+            break;
+        case '2':
+            L3+=0.2;
             break;
         case 27:
             exit(0);

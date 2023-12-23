@@ -6,7 +6,7 @@ This repository contains two separate OpenGL tasks, providing hands-on experienc
 - [Task 1 README](task-1/README.md)
 
 <div align="center">
-  <img src="" alt="System and biomedical engineering" width="300">
+  <img src="https://github.com/Zoz-HF/GFX-Tasks/blob/main/task01/img/output.png" alt="System and biomedical engineering" width="300">
 </div>
 
 ## Task 2: Composing a Scene & Drawing a Leaf

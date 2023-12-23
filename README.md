@@ -21,7 +21,11 @@ This repository contains two separate OpenGL tasks, providing hands-on experienc
   </div>
 </div>
 
-
+## Task 3: Animate a man throwing a ball.
+- [Task 3 README](task-3/README.md)  
+<p align="center">
+  <img src="task-3/img/projection.gif" alt="GIF Demo">
+</p>
 ---
 
 **You can follow the links above to get detailed information for each task. 😊**

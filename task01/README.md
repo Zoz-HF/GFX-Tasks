@@ -16,7 +16,7 @@ Before running this program, ensure you have the following installed:
 The program will display graphical representations of characters and shapes in an OpenGL window.
 
 <div align="center">
-  <img src="https://github.com/Zoz-HF/GFX-Tasks/blob/main/task-1/img/output.png?raw=true" alt="System and biomedical engineering" width="400">
+  <img src="https://github.com/Zoz-HF/GFX-Tasks/blob/main/task01/img/output.png" alt="System and biomedical engineering" width="400">
 </div>
 
 ## Acknowledgments

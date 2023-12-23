@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "c:/Users/dell/Desktop/Ziyad/Ziyad/cmake-build-debug"
+			"value" : "e:/SBE/SBE 3rd Year/Courses/Computer Graphics/Tasks/github/GFX-Tasks/task05/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -575,7 +575,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/dell/Desktop/Ziyad/Ziyad/cmake-build-debug/CMakeFiles/pkgRedirects"
+			"value" : "E:/SBE/SBE 3rd Year/Courses/Computer Graphics/Tasks/github/GFX-Tasks/task05/cmake-build-debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -647,7 +647,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Users/dell/Desktop/Ziyad/Ziyad"
+			"value" : "E:/SBE/SBE 3rd Year/Courses/Computer Graphics/Tasks/github/GFX-Tasks/task05"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -659,7 +659,7 @@
 				}
 			],
 			"type" : "PATH",
-			"value" : "C:/Program Files (x86)/task"
+			"value" : "C:/Program Files (x86)/task05"
 		},
 		{
 			"name" : "CMAKE_LINKER",
@@ -875,7 +875,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "task"
+			"value" : "task05"
 		},
 		{
 			"name" : "CMAKE_RANLIB",
@@ -1506,7 +1506,7 @@
 			"value" : "TRUE"
 		},
 		{
-			"name" : "task_BINARY_DIR",
+			"name" : "task05_BINARY_DIR",
 			"properties" : 
 			[
 				{
@@ -1515,10 +1515,10 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/dell/Desktop/Ziyad/Ziyad/cmake-build-debug"
+			"value" : "E:/SBE/SBE 3rd Year/Courses/Computer Graphics/Tasks/github/GFX-Tasks/task05/cmake-build-debug"
 		},
 		{
-			"name" : "task_IS_TOP_LEVEL",
+			"name" : "task05_IS_TOP_LEVEL",
 			"properties" : 
 			[
 				{
@@ -1530,7 +1530,7 @@
 			"value" : "ON"
 		},
 		{
-			"name" : "task_SOURCE_DIR",
+			"name" : "task05_SOURCE_DIR",
 			"properties" : 
 			[
 				{
@@ -1539,7 +1539,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "C:/Users/dell/Desktop/Ziyad/Ziyad"
+			"value" : "E:/SBE/SBE 3rd Year/Courses/Computer Graphics/Tasks/github/GFX-Tasks/task05"
 		}
 	],
 	"kind" : "cache",

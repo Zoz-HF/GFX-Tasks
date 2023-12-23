@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/dell/Desktop/Ziyad/Ziyad
+# Install script for directory: E:/SBE/SBE 3rd Year/Courses/Computer Graphics/Tasks/github/GFX-Tasks/task05
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/task")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/task05")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Users/dell/Desktop/Ziyad/Ziyad/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "E:/SBE/SBE 3rd Year/Courses/Computer Graphics/Tasks/github/GFX-Tasks/task05/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

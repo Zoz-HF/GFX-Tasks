@@ -8,14 +8,14 @@ We have used a **transformer-core** shape as out starting point for the house st
 
 <div align="center">
   <div style="margin: 10px;">
-    <img src="https://github.com/Zoz-HF/GFX-Tasks/blob/main/task-2/img/core.png?raw=true" alt="System and biomedical engineering" width="400">
+    <img src="https://github.com/Zoz-HF/GFX-Tasks/blob/main/task02/img/core.png" alt="System and biomedical engineering" width="400">
   </div>
 </div>
 
 Then, we have used the circle equation to shape our sunny element in the scene. We have drawn such element using `GL_TRIANGLE_FAN`.
 <div align="center">
   <div style="margin: 20px;">
-    <img src="https://github.com/Zoz-HF/GFX-Tasks/blob/main/task-2/img/sun.jpg?raw=true" alt="System and biomedical engineering" width="400";>
+    <img src="https://github.com/Zoz-HF/GFX-Tasks/blob/main/task02/img/sun.jpg" alt="System and biomedical engineering" width="400";>
   </div>
 </div>
 
@@ -23,7 +23,7 @@ After mixing theses shapes and with the help of our artistic nature, we could co
 
 <div align="center">
   <div style="display: inline-block; margin-right: 20px;">
-    <img src="https://github.com/Zoz-HF/GFX-Tasks/blob/main/task-2/img/Home_Scene.png?raw=true" alt="System and biomedical engineering" width="400">
+    <img src="https://github.com/Zoz-HF/GFX-Tasks/blob/main/task02/img/Home_Scene.png" alt="System and biomedical engineering" width="400">
   </div>
 </div>
 
@@ -32,7 +32,7 @@ After mixing theses shapes and with the help of our artistic nature, we could co
 This shape was a bit challenging for beginners due to its curvature nature, where we had to define multiple different curves with different radius to add as much as realistic to the drawing. 
 <div align="center">
   <div style="display: inline-block; margin-right: 20px;">
-    <img src="https://github.com/Zoz-HF/GFX-Tasks/blob/main/task-2/img/Screenshot%202023-11-02%20190151.png?raw=true" alt="System and biomedical engineering" width="200">
+    <img src="https://github.com/Zoz-HF/GFX-Tasks/blob/main/task02/img/Screenshot%202023-11-02%20190151.png" alt="System and biomedical engineering" width="200">
   </div>
 </div>
 

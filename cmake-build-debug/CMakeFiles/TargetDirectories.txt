@@ -1,3 +1,0 @@
-E:/SBE/SBE 3rd Year/Courses/Computer Graphics/Tasks/Assignment5/cmake-build-debug/CMakeFiles/task.dir
-E:/SBE/SBE 3rd Year/Courses/Computer Graphics/Tasks/Assignment5/cmake-build-debug/CMakeFiles/edit_cache.dir
-E:/SBE/SBE 3rd Year/Courses/Computer Graphics/Tasks/Assignment5/cmake-build-debug/CMakeFiles/rebuild_cache.dir

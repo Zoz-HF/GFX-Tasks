@@ -35,9 +35,9 @@ In these gifs we can see that the user can zoom in or out or return to normal.
 the user can also rotate the camera to the left or the right.   
 the user can also move the camera up or down.   
 <p align="center">
-  <img src="imgs/zoom.gif" alt="collwithtarget">
-  <img src="imgs/Rotate around y.gif" alt="collwithtarget">
-  <img src="imgs/Rotate around x.gif" alt="collwithtarget">
+  <img src="imgs/zoom.gif" alt="Zoom">
+  <img src="imgs/Rotate around y.gif" alt="Rotate y">
+  <img src="imgs/Rotate around x.gif" alt="rotate x">
 </p>   
 
 ___

@@ -31,7 +31,7 @@ This repository contains two separate OpenGL tasks, providing hands-on experienc
 ## Task 4: A simple game.
 - [Task 4 README](task04/README.md)  
 <p align="center">
-  <img src="https://github.com/Zoz-HF/GFX-Tasks/blob/main/task03/img/projection.gif" alt="GIF Demo">
+  <img src="https://github.com/Zoz-HF/GFX-Tasks/blob/main/task04/imgs/collision with target.gif" alt="GIF Demo">
 </p>
 ---
 

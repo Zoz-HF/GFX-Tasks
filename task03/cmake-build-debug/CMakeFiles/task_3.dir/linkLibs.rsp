@@ -1,0 +1,1 @@
+ -lopengl32 "C:/Program Files (x86)/mingw32/mingw32/lib/libfreeglut.a" "C:/Program Files (x86)/mingw32/mingw32/lib/glew32.lib" -lfreeGLUT -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 

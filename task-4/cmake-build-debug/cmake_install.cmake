@@ -1,8 +1,8 @@
-# Install script for directory: C:/Faculty Materials/3rd year/graphics/GFX-Tasks/task-3
+# Install script for directory: C:/Faculty Materials/3rd year/graphics/GFX-Tasks/task-4
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/task_3")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/task")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Faculty Materials/3rd year/graphics/GFX-Tasks/task-3/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Faculty Materials/3rd year/graphics/GFX-Tasks/task-4/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

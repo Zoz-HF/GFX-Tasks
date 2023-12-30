@@ -16,7 +16,20 @@ Here we can see that the direction of the light changes if we change the directi
   <img src="imgs/Direction of light.gif" alt="gif">
 </p>
 
-## 3. Full Demo of the game.
+## 3. Change texture of objects
+___
+In these gifs we change the textures of the sky, road, blocks, and land.
+<p align="center">
+  <img src="imgs/Change sky texture.gif" alt="gif">
+  <img src="imgs/Change road texture.gif" alt="gif">
+</p>
+
+<p align="center">
+  <img src="imgs/Change building texture.gif" alt="gif">
+  <img src="imgs/Change land texture.gif" alt="gif">
+</p>
+
+## 4. Full Demo of the game.
 ___
 <p align="center">
   <img src="imgs/Full demo.gif" alt="gif">

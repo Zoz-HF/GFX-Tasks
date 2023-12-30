@@ -1,0 +1,3 @@
+C:/Faculty Materials/3rd year/graphics/GFX-Tasks/task05/cmake-build-debug/CMakeFiles/task.dir
+C:/Faculty Materials/3rd year/graphics/GFX-Tasks/task05/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Faculty Materials/3rd year/graphics/GFX-Tasks/task05/cmake-build-debug/CMakeFiles/rebuild_cache.dir

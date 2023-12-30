@@ -1,0 +1,8 @@
+# ninja log v5
+796	950	7250773018020547	task.exe	2d4eeec7f2552aa7
+2	292	7256495290903815	build.ninja	9ba2f49748171aa4
+7	411	7250667769189806	CMakeFiles/task.dir/getBMP.cpp.obj	fc9dc1a6fe12ae67
+3	795	7250773016508444	CMakeFiles/task.dir/texture+lighting.cpp.obj	751c07c3174454b6
+2	444	7256496187425129	CMakeFiles/task.dir/getBMP.cpp.obj	8f6d28878f057886
+14	965	7256496192604623	CMakeFiles/task.dir/texture+lighting.cpp.obj	aac6858bb8e88e5e
+966	1184	7256496194722986	task.exe	bec181f150d3999b

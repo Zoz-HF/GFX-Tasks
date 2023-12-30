@@ -9,6 +9,7 @@ This repository contains two separate OpenGL tasks, providing hands-on experienc
   <img src="https://github.com/Zoz-HF/GFX-Tasks/blob/main/task01/img/output.png" alt="System and biomedical engineering" width="300">
 </div>
 
+---
 ## Task 2: Composing a Scene & Drawing a Leaf
 - [Task 2 README](task02/README.md)
 
@@ -21,11 +22,13 @@ This repository contains two separate OpenGL tasks, providing hands-on experienc
   </div>
 </div>
 
+___
 ## Task 3: Animate a man throwing a ball.
 - [Task 3 README](task03/README.md)  
 <p align="center">
   <img src="https://github.com/Zoz-HF/GFX-Tasks/blob/main/task03/img/projection.gif" alt="GIF Demo">
 </p>
+
 ---   
 
 ## Task 4: A simple game.
@@ -33,6 +36,14 @@ This repository contains two separate OpenGL tasks, providing hands-on experienc
 <p align="center">
   <img src="https://github.com/Zoz-HF/GFX-Tasks/blob/main/task04/imgs/collistion with target.gif" alt="GIF Demo">
 </p>
+
 ---
 
+## Task 5: A simple game with light and textures on objects.
+- [Task 5 README](task05/README.md)
+<p align="center">
+  <img src="https://github.com/Zoz-HF/GFX-Tasks/blob/main/task05/imgs/Full demo.gif" alt="GIF Demo">
+</p>
+
+---
 **You can follow the links above to get detailed information for each task. 😊**
